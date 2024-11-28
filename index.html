@@ -4,9 +4,17 @@
   <meta charset="utf-8">
   <title>いんどあのサイト</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel=”icon” href=“favicon.ico”>
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeCTIwqAAAAAH-Z06xZzrdwdkPA-qjCGcOkmz-V"></script>
+  <!-- Your code -->
 </head>
 <body>
  <h1>   Hello!   </h1>
+  <script>
+  function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LeCTIwqAAAAAH-Z06xZzrdwdkPA-qjCGcOkmz-V', {action: 'LOGIN'});
+    });
+  }
+</script>
 </body>
